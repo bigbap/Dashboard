@@ -1,1 +1,7 @@
-﻿
+﻿<script>
+    require(["dashboard"], (Dashboard) => {
+        Dashboard.Dashboard.GetInstance({
+            templates: ["test"]
+        }).init();
+    });
+</script>

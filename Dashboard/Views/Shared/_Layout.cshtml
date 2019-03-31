@@ -6,6 +6,17 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/requirejs")
+
+    <script type="text/javascript">
+        require.config({
+            baseUrl: "/",
+            paths: {
+                "mustache": "node_modules/mustache/",
+                "dashboard": "Scripts/Dashboard/Dashboard"
+            },
+        });
+    </script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
